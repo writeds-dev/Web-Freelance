@@ -1,0 +1,10 @@
+# type: module 
+# this will work as the import systrm 
+
+# import  react from "react"
+
+# require("express")
+
+# navbar 
+
+# keyname we will place header 
