@@ -3,8 +3,3 @@
 @tailwind utilities;
 
 
-@layer base{
-    body{
-        background:#183B4E;
-    }
-}
