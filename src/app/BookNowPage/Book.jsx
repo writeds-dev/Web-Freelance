@@ -1,6 +1,5 @@
 import React from 'react'
 import ContactSection from '../../Components/BookNow/Form/Form'
-import ContactForm1 from '../../Components/BookNow/Contactus/Contactus'
 const Book = () => {
   return (
     <div>
@@ -38,7 +37,6 @@ const Book = () => {
         </div>
       </div>
       <ContactSection/>
-          <ContactForm1/>
     </div>
   )
 }

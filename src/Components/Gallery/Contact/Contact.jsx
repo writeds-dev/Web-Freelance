@@ -14,7 +14,7 @@ const BookYourHotel = () => {
           </p>
           <div className="flex gap-4">
             <a
-              href="/booking"
+              href="/book"
               className="bg-[#159bc2] text-white px-8 py-3 rounded-full text-md font-bold uppercase shadow hover:bg-[#127b97] transition duration-300"
             >
               Contact Now

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChevronDownIcon } from '@heroicons/react/24/outline';
+import { ChevronDownIcon } from "@heroicons/react/24/outline";
 
 const faqs = [
   {
@@ -38,46 +38,47 @@ const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
   return (
-    <section className="py-16 px-4 min-h-[60vh] ">
-      <div className="max-w-2xl mx-auto">
+    <section className="py-16 px-4 min-h-[60vh] bg-gray-50">
+      <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">
-          <span className="text-red-700">Your Questions</span> Answered
+          <span className="text-red-600">Your Questions</span> Answered
         </h2>
-        <div className="space-y-6">
-          {faqs.map((faq, idx) => (
-            <div
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {faqs.map((faq, idx) => ( <div
               key={idx}
-              className={`rounded- border-2 transition-all duration-300 
-                ${openIndex === idx 
-                  ? "border-red-500 bg-white shadow-lg" 
-                  : " hover:border-red-500 hover:shadow-md"
-                }`}
+              className={`rounded-lg border-2 p-1 transition-all duration-300 ease-in-out ${
+                openIndex === idx
+                  ? "border-red-600 bg-white shadow-lg"
+                  : "border-gray-300 hover:border-red-600 hover:shadow-md"
+              }`}
             >
               <button
-                className="flex w-full items-center gap-3 px-6 py-5 text-left group"
+                className="flex w-full items-center gap-4 px-6 py-5 text-left group"
                 onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
                 aria-expanded={openIndex === idx}
                 aria-controls={`faq-item-${idx}`}
               >
-                <span className={`flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-full font-bold 
-                  ${openIndex === idx ? "bg-red-600 text-white" : ""}
-                `}>
+                <span
+                  className={`w-10 h-10 flex items-center justify-center rounded-full font-bold text-white bg-red-600`}
+                >
                   {idx + 1}
                 </span>
-                <span className="flex-1 text-lg md:text-xl font-medium text-gray-800">{faq.question}</span>
+                <span className="flex-1 text-lg md:text-xl font-medium text-gray-800">
+                  {faq.question}
+                </span>
                 <ChevronDownIcon
-                  className={`w-6 h-6 ml-2 transition-transform duration-300 
-                    ${openIndex === idx ? "text-red-500 rotate-180" : "text-blue-500"}
-                  `}
+                  className={`w-6 h-6 ml-2 transition-transform duration-300 group-hover:text-red-600 ${
+                    openIndex === idx ? "rotate-180 text-red-600" : "text-gray-500"
+                  }`}
                 />
               </button>
               <div
                 id={`faq-item-${idx}`}
-                className={`px-6 pt-0 pb-5 text-gray-600 text-base transition-all duration-300 
-                  ${openIndex === idx 
-                    ? "max-h-60 opacity-100" 
+                className={`px-6 pt-0 pb-5 text-gray-600 text-base transition-all duration-300 ease-in-out ${
+                  openIndex === idx
+                    ? "max-h-64 opacity-100"
                     : "max-h-0 opacity-0 overflow-hidden"
-                  }`}
+                }`}
               >
                 {faq.answer}
               </div>

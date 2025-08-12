@@ -9,7 +9,7 @@ const GalleryPage = () => {
      <div
   className="relative flex items-center justify-center h-[400px] md:h-[520px] bg-center bg-cover"
   style={{
-    backgroundImage: "url('/P/p-1.webp')",
+    backgroundImage: "url('/images/a (30).JPG')",
   }}
 >
   {/* Strong black overlay for text visibility */}

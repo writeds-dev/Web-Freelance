@@ -23,15 +23,23 @@ const ContactForm = () => {
     },
     validationSchema,
     onSubmit: (values, { resetForm }) => {
-      // Handle form submission (e.g., send to backend)
-      alert("Message sent!\n\n" + JSON.stringify(values, null, 2));
-      resetForm();
+      // Construct the WhatsApp URL with the user's form data
+      const phoneNumber = "9805260347"; 
+      const message = `Hello, I would like to enquire about booking a room.\n\nFirst Name: ${values.firstName}\nLast Name: ${values.lastName}\nEmail: ${values.email}\nPhone: ${values.phone}\nMessage: ${values.message}`;
+      const encodedMessage = encodeURIComponent(message); // URL encode the message
+      const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+      
+      // Open WhatsApp with the pre-filled message
+      window.open(whatsappURL, "_blank");
+
+      resetForm(); // Reset the form after submission
     },
   });
 
   return (
     <div id="booking-form" className="bg-white p-8 rounded shadow flex flex-col justify-between">
-      <h3 className="text-2xl font-bold text-black mb-6">KEEP IN <span className="text-red-800">TOUCH</span>
+      <h3 className="text-2xl font-bold text-black mb-6">
+        KEEP IN <span className="text-red-800">TOUCH</span>
       </h3>
       <form className="space-y-5" onSubmit={formik.handleSubmit}>
         {/* First Name */}

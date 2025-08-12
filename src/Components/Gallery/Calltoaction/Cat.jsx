@@ -31,7 +31,7 @@ const CallToAction = () => {
           Enjoy fine dining, lavish rooms, and unmatched service in every stay.
         </p>
         <a
-          href="/booking"
+          href="/book "
           className="inline-block bg-blue-500 hover:bg-blue-500 text-white text-lg font-bold rounded-full px-8 py-3 transition mt-2 shadow-xl"
         >
           Book Your Stay

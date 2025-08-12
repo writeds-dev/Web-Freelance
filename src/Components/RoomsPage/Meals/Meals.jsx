@@ -1,57 +1,64 @@
-// src/components/MealsSection.jsx
+const Meals = () => {
+  return (
+    <div className="bg-white text-gray-800">
+      {/* Main Section */}
+      <div className="flex flex-col lg:flex-row items-center justify-between p-6 lg:p-12">
+        {/* Left Section (Text and Features) */}
+        <div className="max-w-xl space-y-6 lg:w-1/2">
+          <h2 className="text-3xl lg:text-4xl font-semibold text-brown-800">
+            Quality <span className="text-red-800 font-semibold underline">Food & Drink</span> Your Trip Are Enjoyable
+          </h2>
+          <p className="text-base lg:text-lg text-gray-500">
+            Sed ut perspiciatis unde omnis natus voluptatem accusantium doloremque laudantium, totam rem aperiam inventore.
+          </p>
 
-const meals = [
-  {
-    name: "Breakfast",
-    img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80",
-    time: "7:00 – 11:00 am",
-    desc: "Enjoy a fresh continental breakfast with local specialties and hot coffee.",
-  },
-  {
-    name: "Lunch",
-    img: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=600&q=80",
-    time: "12:00 – 2:00 pm",
-    desc: "Savor a delightful lunch with a selection of local and international cuisines.",
-  },
-  {
-    name: "Dinner",
-    img: "https://images.unsplash.com/photo-1562050344-f7ad946cee35?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGRpbm5lcnxlbnwwfHwwfHx8MA%3D%3D",
-    time: "6:30 – 10:00 pm (last call)",
-    desc: "Indulge in a cozy dinner experience with chef’s specials served daily.",
-  },
-];
-
-const MealsSection = () => (
-  <section className="bg-white py-5 px-4">
-    <div className="max-w-6xl mx-auto">
-      <h2 className="text-4xl md:text-5xl font-bold text-center mb-8 text-gray-800 tracking-tight">
-        <span className="text-red-700">Meals</span> & Timings
-      </h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {meals.map((meal) => (
-          <div
-            key={meal.name}
-            className=" shadow-lg bg-gray-50 hover:shadow-2xl transition p-0 flex flex-col overflow-hidden"
-          >
-            <div className="relative">
-              <img
-                src={meal.img}
-                alt={meal.name}
-                className="w-full h-56 object-cover"
-              />
-              <span className="absolute top-4 right-4 bg-red-700 text-white text-xs font-semibold px-4 py-1 rounded-full shadow">
-                {meal.time}
-              </span>
+          {/* Feature List */}
+          <div className="space-y-4 mt-8">
+            <div className="flex items-start">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                className="h-5 w-5 text-brown-800 mr-3"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12l5 5L20 7" />
+              </svg>
+              <div>
+                <h3 className="font-semibold text-lg lg:text-xl text-brown-800">Breakfast, Tea & Coffee</h3>
+                <p className="text-sm lg:text-base text-gray-500">To take a trivial example, which undertakes laborious ways.</p>
+              </div>
             </div>
-            <div className="p-6 flex flex-col items-center flex-1">
-              <h3 className="text-2xl font-bold mb-2 text-gray-800">{meal.name}</h3>
-              <p className="text-gray-600 text-center mb-4">{meal.desc}</p>
+
+            <div className="flex items-start">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                className="h-5 w-5 text-brown-800 mr-3"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12l5 5L20 7" />
+              </svg>
+              <div>
+                <h3 className="font-semibold text-lg lg:text-xl text-brown-800">Quality Foods & Kitchen</h3>
+                <p className="text-sm lg:text-base text-gray-500">Sed ut perspiciatis omnis natus voluptatem accusans.</p>
+              </div>
             </div>
           </div>
-        ))}
+
+          <button className="mt-6 px-6 py-3 bg-brown-800 text-white font-semibold rounded-lg">
+            Learn More Hotel
+          </button>
+        </div>
+
+        {/* Image Section */}
+        <div className="w-full lg:w-1/2 p-6">
+          <img src="/images/a (8).JPG" alt="Hotel Interior" className="w-full h-auto shadow-lg " />
+        </div>
       </div>
     </div>
-  </section>
-);
+  );
+};
 
-export default MealsSection;
+export default Meals;

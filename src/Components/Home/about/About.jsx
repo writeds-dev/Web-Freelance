@@ -33,9 +33,9 @@ const About1 = () => {
           <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start">
             <div className="relative w-full max-w-md mx-auto">
               <img
-                src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG90ZWx8ZW58MHx8MHx8fDA%3D"
+                src="/images/a (21).JPG"
                 alt="Resort in the hills"
-                className="rounded-xl shadow-xl w-full object-cover transition-transform duration-500 hover:scale-105"
+                className=" shadow-xl w-full object-cover transition-transform duration-500 hover:scale-105"
               />
             </div>
             <div className="mt-8 bg-white bg-opacity-80 rounded-lg p-6 md:p-8 shadow-lg max-w-xl text-center lg:text-left">

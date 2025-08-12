@@ -1,10 +1,10 @@
 import React from 'react';
-import "./index.css"
+import "./index.css";
 
 const rooms = [
   {
-    title: 'Super Deluxe Room',
-    image: 'https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8cm9vbSUyMGhvdGVsfGVufDB8fDB8fHww',
+    title: 'Super Deluxe Room 1',
+    image: '/images/a (4).JPG', // Ensure the image is in the public/images folder
     button: true,
     features: [
       '2 Person',
@@ -15,8 +15,8 @@ const rooms = [
     ],
   },
   {
-    title: 'Suite',
-    image: 'https://images.unsplash.com/flagged/photo-1556438758-8d49568ce18e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHJvb20lMjBob3RlbHxlbnwwfHwwfHx8MA%3D%3D',
+    title: 'Super Deluxe Room 2',
+    image: '/images/a (5).JPG', // Ensure the image is in the public/images folder
     button: true,
     features: [
       '2 Person',
@@ -24,14 +24,19 @@ const rooms = [
       'All Meals',
       'Free WiFi',
       'Travel Desk',
-      '24 Hrs Services',
     ],
   },
   {
-    title: 'Restaurant',
-    image: 'https://images.unsplash.com/photo-1668260592478-a6513b0a690e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzZ8fHJvb20lMjBob3RlbHxlbnwwfHwwfHx8MA%3D%3D',
-    button: false,
-    description: "Dine at our in-house Restaurant, offering a variety of cuisines and a cozy ambiance.",
+    title: 'Super Deluxe Room 3',
+    image: 'https://images.unsplash.com/photo-1603052871303-1b65e290e6ca?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHJvb20lMjBob3RlbHxlbnwwfHwwfHx8MA%3D%3D',
+    button: true,
+    features: [
+      '2 Person',
+      'LED TV',
+      'All Meals',
+      'Free WiFi',
+      'Travel Desk',
+    ],
   },
 ];
 
@@ -56,6 +61,7 @@ export default function RoomsSuites() {
                     backgroundImage: `url(${room.image})`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
+                    height: '100%', // Ensure it takes full height
                   }}
                 >
                   <div className="absolute bottom-6 left-0 w-full text-center z-10">
@@ -72,8 +78,11 @@ export default function RoomsSuites() {
                         <li key={fIdx}>{feature}</li>
                       ))}
                     </ul>
-                  ) : (
-                    <p className="text-gray-200 text-lg text-center">{room.description}</p>
+                  ) : null}
+                  {room.button && (
+                    <button className="mt-4 px-6 py-2 bg-red-600 text-white font-semibold rounded-lg">
+                      Book Now
+                    </button>
                   )}
                 </div>
               </div>

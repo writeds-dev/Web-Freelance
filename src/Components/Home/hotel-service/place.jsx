@@ -7,7 +7,7 @@ const services = [
     description:
       "The dining hall with its majestic setting lends enchantment to a cozy meal. Its sun decks are an ideal place to enjoy a lazy late morning breakfast. The Resort serves Indian, Chinese & Continental cuisine.",
     button: "View Details",
-    img: "https://images.unsplash.com/photo-1668260592478-a6513b0a690e?w=800&auto=format&fit=crop&q=80",
+    img: "/images/a (21).JPG",
     reverse: false,
   },
   {
@@ -16,7 +16,7 @@ const services = [
     description:
       "Start your life together on the right note—with the assurance that your Honeymoon will be the one you have always dreamed of. When you’re looking for a getaway with more value, resort De Park offers unique packages resort discounts. Discover our latest deals and resort special offers.",
     button: "View Details",
-    img: "https://images.unsplash.com/photo-1610178009236-02461f18b272?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c2hpbWxhfGVufDB8fDB8fHww",
+    img: "/images/a (7).JPG",
     reverse: true,
   },
  {
@@ -25,7 +25,7 @@ const services = [
   description:
     "Embark on breathtaking hikes and thrilling adventures around Manali. Discover scenic trails, lush forests, and panoramic views as you connect with nature. Our resort offers guided tours and all the essentials for a safe and memorable outdoor experience.",
   button: "View Details",
-  img: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600&auto=format&fit=crop&q=80", // Example hiking image
+  img: "/images/a (9).JPG", // Example hiking image
   reverse: false, // image left, content right
 }
 

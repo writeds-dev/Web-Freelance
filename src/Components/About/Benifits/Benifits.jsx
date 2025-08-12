@@ -20,20 +20,20 @@ const benefits = [
 
 export default function HotelBenefits() {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6">
         {/* Top: Title & Subtitle */}
-        <div className="md:flex md:items-center md:justify-between mb-8">
+        <div className="md:flex md:items-center md:justify-between mb-12">
           <div className="mb-6 md:mb-0">
             <div className="flex items-center mb-3">
-              <hr className="w-12 border-t-2 border-red-800 mr-4" />
-              <span className="text-black-400 uppercase tracking-widest font-medium">Our Benefits</span>
+              <hr className="w-16 border-t-2 border-red-800 mr-4" />
+              <span className="text-red-700 uppercase tracking-widest font-semibold">Our Benefits</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-red-800 max-w-2xl mb-4">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-800 max-w-2xl mb-4">
               OUR HOTEL HAS BEEN LEADING IN HOSPITALITY SINCE 1982
             </h2>
           </div>
-          <div className="max-w-xl text-left text-black space-y-4 ml-auto">
+          <div className="max-w-xl text-left text-gray-700 space-y-4 ml-auto">
             <p>
               Discover why guests keep coming back to us! Our commitment to luxury, comfort, and outstanding service has set us apart for over four decades.
             </p>
@@ -43,15 +43,18 @@ export default function HotelBenefits() {
           </div>
         </div>
         {/* Benefits Boxes */}
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-10">
           {benefits.map((benefit, i) => (
-            <div key={i} className="border p-6 flex items-center bg-white">
-              <div className="w-20 h-20 flex items-center justify-center bg-cyan-600 rounded-md mr-6">
+            <div
+              key={i}
+              className="border bg-white p-8 flex items-center rounded-lg shadow-lg transition transform hover:scale-105 hover:shadow-2xl"
+            >
+              <div className="w-16 h-16 flex items-center justify-center  text-white rounded-full mr-8">
                 <img src={benefit.icon} alt={benefit.title} className="w-10 h-10" />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-blue-600 mb-2">{benefit.title}</h3>
-                <p className="text-black-700">{benefit.desc}</p>
+                <h3 className="text-xl font-semibold text-gray-800 mb-3">{benefit.title}</h3>
+                <p className="text-gray-600">{benefit.desc}</p>
               </div>
             </div>
           ))}

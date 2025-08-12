@@ -17,8 +17,7 @@ const ContactSection = () => {
               </svg>
             </span>
             <span>
-              445 Mount Eden Road, Mt Edenward<br />
-              land
+             Address - : Kanyal Road, Simsa Village, near Volvo bus stand, Manali, Kullu District, Himachal Pradesh 175131, India
             </span>
           </div>
           {/* Phone */}
@@ -29,8 +28,8 @@ const ContactSection = () => {
               </svg>
             </span>
             <span>
-              977-444-666-888<br />
-              977-444-222-000
+              Contact no. - 9805260347 <br />
+               8350888932
             </span>
           </div>
           {/* Email */}
@@ -42,8 +41,7 @@ const ContactSection = () => {
               </svg>
             </span>
             <span>
-              info@Gautama.com.np<br />
-              help@Gautama.com.np
+              thecastlevilla6@gmail.com<br />
             </span>
           </div>
         </div>

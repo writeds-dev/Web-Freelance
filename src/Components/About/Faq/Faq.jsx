@@ -39,15 +39,16 @@ const AboutUsFAQ = () => {
 
   return (
     <section className="py-16 px-4 min-h-[60vh] bg-gray-50">
-      <div className="max-w-2xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">
           <span className="text-red-700">About Our Hotel</span> – Frequently Asked Questions
         </h2>
-        <div className="space-y-6">
+        {/* Grid Layout */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {faqs.map((faq, idx) => (
             <div
               key={idx}
-              className={`rounded border-2 transition-all duration-300 
+              className={`rounded-lg border-2 transition-all duration-300 
                 ${openIndex === idx 
                   ? "border-red-500 bg-white shadow-lg" 
                   : "hover:border-red-500 hover:shadow-md"

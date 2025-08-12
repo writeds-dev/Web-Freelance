@@ -3,6 +3,8 @@ import Cottage from "../../Components/Home/cottage/Cottage";
 import MealTimes from "../../Components/RoomsPage/Meals/Meals";
 import Testimonial from "../../Components/RoomsPage/Testimonial/Testimonial";
 import FAQ from "../../Components/RoomsPage/Faq/Faq";
+import RoomsVideoSection from "../../Components/RoomsPage/Vedio/Video";
+import NearbyPlaces from "../../Components/RoomsPage/Places/Places";
 
 const Room = () => {
   return (
@@ -12,7 +14,7 @@ const Room = () => {
   className="relative flex items-center justify-center h-[400px] md:h-[520px] bg-center bg-cover"
   style={{
     backgroundImage:
-      "url('https://images.unsplash.com/photo-1623728276928-965ffeb5d735?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDN8fHNoaW1sYXxlbnwwfHwwfHx8MA%3D%3D')",
+      "url('/images/a (25).JPG')",
   }}
 >
   {/* Elegant semi-gradient overlay */}
@@ -47,6 +49,8 @@ const Room = () => {
       {/* Room Details Section */}
       <RoomDetails />
       <Cottage/>
+      <NearbyPlaces/>
+      <RoomsVideoSection/>
       <MealTimes/>
       <Testimonial/>
       <FAQ/>
