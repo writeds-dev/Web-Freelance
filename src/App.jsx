@@ -19,6 +19,7 @@ import Works from './Components/Home/work/Work';
 import RecentPosts from './Components/Home/blogs/blogs';
 import VideoPlayer from './Components/Home/video/Video'; 
 import FAQ from './Components/Home/Faq/Faq'; 
+import Marquee from './Components/Home/Marquee/Marquee';
 
 // Pages for routes
 import Room from './app/RoomsPage/Room';
@@ -52,13 +53,14 @@ const App = () => {
               <Hero />
               <About1 />
               <RoomsSuites />
-              <BestServices />
-              <WelCome />
-              <VideoPlayer />
               <Cottage />
+              <BestServices />
+              <Marquee/>
+              <VideoPlayer />
+              <WelCome />
               <Gallery />
-              <RecentListings />
               <Works />
+              <RecentListings />
               <RecentPosts />
               <FAQ />
             </>

@@ -20,7 +20,7 @@ const visitingPlaces = [
 
 const RecentListings = () => {
   return (
-    <div className="container mx-auto px-4 py-12">
+    <div className="container mx-auto px-4 py-2">
       {/* Header */}
       <div className="flex flex-col md:flex-row justify-between md:items-end gap-4 mb-10">
         <div>

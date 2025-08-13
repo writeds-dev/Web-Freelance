@@ -40,14 +40,14 @@ const About1 = () => {
             </div>
             <div className="mt-8 bg-white bg-opacity-80 rounded-lg p-6 md:p-8 shadow-lg max-w-xl text-center lg:text-left">
               <p className="text-gray-800 text-lg md:text-xl leading-relaxed">
-                <span className="font-semibold text-red-700">The Castle Resort at Fagu</span> in Shimla Hills, H.P is nestled in the lap of nature. The name "Fagu" is derived from the word "fog", as it is often covered in fog, especially during the rainy season. Surrounded by apple orchards, it provides a surreal and romantic atmosphere at an altitude of 8000 ft. The resort has 42 well-appointed and comfortable cottage rooms, each named after the districts of Himachal Pradesh.
+                <span className="font-semibold text-red-700">The Castle Villa, Manali </span> Nestled in the heart of the majestic Himalayas, offers a perfect blend of comfort, charm, and scenic beauty. Surrounded by snow-capped peaks and lush greenery, our boutique villa is designed to be a peaceful retreat for travelers seeking relaxation, adventure, or a romantic getaway.With well-appointed rooms, personalized hospitality, and modern amenities wrapped in rustic charm, our villa promises a stay that feels both luxurious and homely. Whether you're a solo traveler, a couple, or a family, we’re here to ensure your visit to Manali is as enchanting as the mountains themselves.
               </p>
             </div>
           </div>
 
           {/* Right: Title & Features */}
           <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start">
-            <div className="text-center lg:text-left mb-8">
+            <div className="text-center lg:text-left mb-1">
               <span className="uppercase tracking-widest font-semibold text-lg text-blue-800">Let’s Go Together</span>
               <h2 className="mt-4 text-3xl md:text-5xl font-extrabold text-gray-900 leading-tight">
                 Great <em className="text-red-700 italic font-serif">opportunity</em> for <br /> adventure & travels

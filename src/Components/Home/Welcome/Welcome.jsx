@@ -2,23 +2,23 @@ import React from "react";
 
 const FeaturedOffers = () => {
   return (
-    <div className="py-5 px-4 sm:px-6 lg:px-8 bg-white">
-      <h2 className="text-4xl font-extrabold text-center text-gray-900">
-        Exclusive <span  className="text-red-800"> Offers</span>
+    <div className="py-12 px-6 sm:px-8 lg:px-16">
+      <h2 className="text-4xl font-bold text-center text-gray-900 mb-6">
+        Exclusive <span className="text-red-600">Offers</span>
       </h2>
-      <h3 className="text-2xl font-semibold text-center text-gray-600 mb-10">
+      <h3 className="text-2xl font-semibold text-center text-black mb-12">
         Featured Special Offers for Your Stay in Manali
       </h3>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {/* Offer 1 */}
-        <div className="bg-white shadow-lg  overflow-hidden">
+        <div className="bg-white shadow-xl rounded-lg overflow-hidden transform transition-all hover:scale-105 hover:shadow-2xl">
           <img
             src="/images/a (9).JPG"
             alt="Kick off Summer in Manali"
-            className="w-full h-64 object-cover"
+            className="w-full h-64 object-cover rounded-t-lg"
           />
           <div className="p-6">
-            <h4 className="text-xl font-semibold text-gray-900">
+            <h4 className="text-xl font-semibold text-gray-900 hover:text-red-600 transition duration-200">
               Kick off Summer in Manali
             </h4>
             <p className="text-gray-600 mt-2">
@@ -26,7 +26,7 @@ const FeaturedOffers = () => {
             </p>
             <a
               href="#"
-              className="text-indigo-600 hover:text-indigo-900 inline-flex items-center mt-4"
+              className="inline-flex items-center mt-4 text-indigo-600 hover:text-indigo-900 font-medium"
             >
               Learn More
               <svg
@@ -47,14 +47,14 @@ const FeaturedOffers = () => {
         </div>
 
         {/* Offer 2 */}
-        <div className="bg-white shadow-lg  overflow-hidden">
+        <div className="bg-white shadow-xl rounded-lg overflow-hidden transform transition-all hover:scale-105 hover:shadow-2xl">
           <img
             src="/images/a (24).JPG"
             alt="Free Breakfast at Resort"
-            className="w-full h-64 object-cover"
+            className="w-full h-64 object-cover rounded-t-lg"
           />
           <div className="p-6">
-            <h4 className="text-xl font-semibold text-gray-900">
+            <h4 className="text-xl font-semibold text-gray-900 hover:text-red-600 transition duration-200">
               Breakfast with Every Stay
             </h4>
             <p className="text-gray-600 mt-2">
@@ -62,7 +62,7 @@ const FeaturedOffers = () => {
             </p>
             <a
               href="/rooms"
-              className="text-indigo-600 hover:text-indigo-900 inline-flex items-center mt-4"
+              className="inline-flex items-center mt-4 text-indigo-600 hover:text-indigo-900 font-medium"
             >
               Learn More
               <svg
@@ -83,14 +83,14 @@ const FeaturedOffers = () => {
         </div>
 
         {/* Offer 3 */}
-        <div className="bg-white shadow-lg  overflow-hidden">
+        <div className="bg-white shadow-xl rounded-lg overflow-hidden transform transition-all hover:scale-105 hover:shadow-2xl">
           <img
             src="/images/a (27).JPG"
             alt="The Signature Collection"
-            className="w-full h-64 object-cover"
+            className="w-full h-64 object-cover rounded-t-lg"
           />
           <div className="p-6">
-            <h4 className="text-xl font-semibold text-gray-900">
+            <h4 className="text-xl font-semibold text-gray-900 hover:text-red-600 transition duration-200">
               The Signature Collection – Exclusive Villas
             </h4>
             <p className="text-gray-600 mt-2">
@@ -98,7 +98,7 @@ const FeaturedOffers = () => {
             </p>
             <a
               href="#"
-              className="text-indigo-600 hover:text-indigo-900 inline-flex items-center mt-4"
+              className="inline-flex items-center mt-4 text-indigo-600 hover:text-indigo-900 font-medium"
             >
               Learn More
               <svg

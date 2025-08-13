@@ -1,0 +1,32 @@
+/* Marquee container styles */
+.marquee-container {
+  width: 100%;
+  overflow: hidden; /* Hide the text outside the container */
+  position: relative;
+  padding: 10px 0; /* Padding for top and bottom of the container */
+}
+
+/* Marquee text styles */
+.marquee-text {
+  display: inline-block;
+  white-space: nowrap; /* Prevent text from wrapping */
+  font-size: 2rem; /* Adjust the font size */
+  font-weight: bold;
+  color: black; /* Text color */
+  text-transform: uppercase; /* Make the text uppercase for emphasis */
+  letter-spacing: 2px; /* Add spacing between letters for clarity */
+  animation: marquee 90s linear infinite; /* Slower scrolling (adjusted to 90s) */
+  padding-left: 100%; /* Start position of the text */
+  box-sizing: border-box; /* Ensure padding doesn't affect layout */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Soft shadow to make text pop */
+}
+
+/* Keyframes for marquee animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(100%); /* Start from the right side */
+  }
+  100% {
+    transform: translateX(-100%); /* End at the left side */
+  }
+}

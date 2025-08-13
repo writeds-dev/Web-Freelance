@@ -1,13 +1,12 @@
 import React from "react";
 import ContactForm from "../ValidationForm/FormWrapper";
 
-
 const ContactSection = () => {
   return (
-    <section className="bg-gray-50 py-12 px-4">
+    <section className="py-12 px-4">
       <div className="max-w-6xl mx-auto space-y-10">
         {/* Top Info Boxes */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {/* Address */}
           <div className="flex items-center bg-blue-500 text-white p-6 rounded shadow">
             <span className="mr-4">
@@ -17,7 +16,7 @@ const ContactSection = () => {
               </svg>
             </span>
             <span>
-             Address - : Kanyal Road, Simsa Village, near Volvo bus stand, Manali, Kullu District, Himachal Pradesh 175131, India
+              Address - : Kanyal Road, Simsa Village, near Volvo bus stand, Manali, Kullu District, Himachal Pradesh 175131, India
             </span>
           </div>
           {/* Phone */}
@@ -29,7 +28,7 @@ const ContactSection = () => {
             </span>
             <span>
               Contact no. - 9805260347 <br />
-               8350888932
+              8350888932
             </span>
           </div>
           {/* Email */}
@@ -47,7 +46,31 @@ const ContactSection = () => {
         </div>
 
         {/* Support Descriptions */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-2">
+       
+
+        {/* Map & Form */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+          {/* Google Map */}
+          <div className="bg-white rounded shadow overflow-hidden flex h-[300px] sm:h-[400px] md:h-full">
+            <iframe
+              title="Hotel Location"
+              src="https://www.google.com/maps?q=Shimla&output=embed"
+              className="w-full h-full border-0"
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              style={{ minHeight: 300 }}
+            ></iframe>
+          </div>
+          {/* Contact Form */}
+          <div className="flex flex-col h-auto sm:h-[400px] md:h-full   p-6 md:p-10">
+            <div className="flex-1 flex flex-col">
+              <ContactForm />
+            </div>
+          </div>
+          
+        </div>
+         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-2">
           <div>
             <h3 className="text-lg font-bold mb-2">CUSTOMER SUPPORT</h3>
             <p className="text-gray-600">Our staff is here to help with any questions or requests. Enjoy personalized assistance anytime.</p>
@@ -59,30 +82,6 @@ const ContactSection = () => {
           <div>
             <h3 className="text-lg font-bold mb-2">BOOKING QUERIES</h3>
             <p className="text-gray-600">For group bookings or special requests, our reservation experts are ready to assist you.</p>
-          </div>
-        </div>
-
-        {/* Map & Form */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 min-h-[400px]">
-          {/* Google Map */}
-          <div className="bg-white rounded shadow overflow-hidden flex h-[400px] md:h-full">
-            <iframe
-              title="Hotel Location"
-              src="https://www.google.com/maps?q=Shimla&output=embed"
-              className="w-full h-full border-0"
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              style={{ minHeight: 400 }}
-            ></iframe>
-          </div>
-          {/* Contact Form */}
-          <div className="flex flex-col h-[400px] md:h-full bg-blue-50 rounded shadow p-6 md:p-10">
-           
-            <div className="flex-1 flex flex-col">
-              <ContactForm />
-          
-            </div>
           </div>
         </div>
       </div>

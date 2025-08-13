@@ -18,12 +18,7 @@ const GalleryPage = () => {
   <div className="relative z-10 flex  flex-col items-center justify-center text-center px-4">
     {/* Main Title */}
        {/* Breadcrumb */}
-    <nav className="flex items-center space-x-3 text-white/90 text-base md:text-lg font-medium mt-6">
-      <a href="/" className="hover:underline">Home</a>
-      <span className="mx-1">|</span>
-      <span className="text-white/70">Gallery</span>
-    </nav>
-    <h1 className="text-white text-4xl md:text-6xl font-extrabold mb-4 drop-shadow-lg">
+    <h1 className="text-white text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg">
       Property Gallery
     </h1>
     {/* Subtitle */}

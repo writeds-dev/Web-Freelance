@@ -40,7 +40,7 @@ const AboutUsFAQ = () => {
   return (
     <section className="py-16 px-4 min-h-[60vh] bg-gray-50">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">
+        <h2 className="text-4xl sm:text-2xl md:text-4xl font-bold text-center text-gray-800 mb-12">
           <span className="text-red-700">About Our Hotel</span> – Frequently Asked Questions
         </h2>
         {/* Grid Layout */}

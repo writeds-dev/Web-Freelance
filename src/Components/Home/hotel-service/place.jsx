@@ -33,12 +33,12 @@ const services = [
 
 export default function BestServices() {
   return (
-    <div className="bg-white py-12 px-4 md:px-0 min-h-screen">
+    <div className="bg-white py-10 px-4 md:px-0 min-h-screen">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-2xl font-medium tracking-widest text-gray-700 mb-2">
-          THE CASTLE RESORT MANALI
+        <h2 className="text-2xl font-medium text-center tracking-widest text-gray-700 mb-2">
+          THE CASTLE VILLA MANALI
         </h2>
-        <h1 className="text-5xl md:text-6xl font-bold font-serif text-gray-900 mb-10">
+        <h1 className="text-5xl md:text-5xl text-center font-bold font-serif text-gray-900 mb-10">
           Best <em className='text-red-800 italic font-serif font-bold'>Services</em>
         </h1>
 

@@ -20,28 +20,26 @@ const posts = [
 
 export default function RecentPosts() {
   return (
-    <div className="bg-white py-5 px-4 md:px-0">
-      <div className="max-w-5xl mx-auto text-center">
-        <div className="mb-2 text-red-600 font-semibold tracking-widest text-sm">
+    <div className="bg-gray-50 py-12 px-6 md:px-0">
+      <div className="max-w-6xl mx-auto text-center">
+        <div className="mb-4 text-red-600 font-semibold tracking-widest text-xs">
           — FROM OUR BLOG
         </div>
-        <h2 className="text-4xl md:text-5xl font-extrabold text-red-800 mb-4 uppercase tracking-tight">
-          Our <span className='text-gray-800'>Recent</span> Posts
+        <h2 className="text-4xl md:text-5xl font-extrabold text-red-800 mb-6 uppercase tracking-tight">
+          Our <span className="text-black">Recent</span> Posts
         </h2>
-        <p className="text-black mb-10 text-lg max-w-3xl mx-auto">
+        <p className="text-gray-600 mb-12 text-lg max-w-3xl mx-auto">
           Stories, tips, and guides from the Castle Resort team to help you experience the best of our restaurant, hotel, and travel adventures in 2025.
         </p>
       </div>
+      
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         {posts.map((post, idx) => (
-          <div
-            key={idx}
-            className="bg-white shadow-lg rounded-lg overflow-hidden transition hover:shadow-2xl"
-          >
-            <img src={post.image} alt={post.title} className="w-full h-64 object-cover"/>
+          <div key={idx} className="bg-white shadow-md hover:shadow-lg rounded-lg overflow-hidden transition transform hover:scale-105 duration-300 ease-in-out">
+            <img src={post.image} alt={post.title} className="w-full h-64 object-cover rounded-t-lg"/>
             <div className="p-6">
-              <h3 className="text-2xl font-bold text-blue-900 mb-3 leading-snug">{post.title}</h3>
-              <div className="text-gray-400 text-sm">{post.meta}</div>
+              <h3 className="text-2xl font-semibold text-gray-800 mb-3 hover:text-red-600 transition-colors">{post.title}</h3>
+              <div className="text-gray-500 text-sm">{post.meta}</div>
             </div>
           </div>
         ))}

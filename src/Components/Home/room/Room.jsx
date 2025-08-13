@@ -1,95 +1,119 @@
-import React from 'react';
-import "./index.css";
+"use client"
+import React, { useState, useEffect, useRef } from "react";
 
-const rooms = [
-  {
-    title: 'Super Deluxe Room 1',
-    image: '/images/a (4).JPG', // Ensure the image is in the public/images folder
-    button: true,
-    features: [
-      '2 Person',
-      'LED TV',
-      'All Meals',
-      'Free WiFi',
-      'Travel Desk',
-    ],
-  },
-  {
-    title: 'Super Deluxe Room 2',
-    image: '/images/a (5).JPG', // Ensure the image is in the public/images folder
-    button: true,
-    features: [
-      '2 Person',
-      'LED TV',
-      'All Meals',
-      'Free WiFi',
-      'Travel Desk',
-    ],
-  },
-  {
-    title: 'Super Deluxe Room 3',
-    image: 'https://images.unsplash.com/photo-1603052871303-1b65e290e6ca?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHJvb20lMjBob3RlbHxlbnwwfHwwfHx8MA%3D%3D',
-    button: true,
-    features: [
-      '2 Person',
-      'LED TV',
-      'All Meals',
-      'Free WiFi',
-      'Travel Desk',
-    ],
-  },
-];
+const RoomSection = () => {
+  const [count, setCount] = useState(0); // Initialize counter at 0
+  const sectionRef = useRef(null);
 
-export default function RoomsSuites() {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          // If section is in view, start counting from 1 to 8
+          let counter = 1; // start counter from 1
+          const interval = setInterval(() => {
+            if (counter <= 8) {
+              setCount(counter);
+              counter += 1;
+            } else {
+              clearInterval(interval); // stop once the counter reaches 8
+            }
+          }, 700); 
+        }
+      },
+      {
+        threshold: 0.5,  
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);  
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);  
+      }
+    };
+  }, []);
+
+  const roomCategories = [
+    {
+      id: 1,
+      title: "Super Deluxe Room",
+      image: "/images/a (7).JPG",
+      alt: "super deluxe room",
+      description: "Experience the utmost luxury with top-notch amenities.",
+      paragraph: "The Super Deluxe Room offers a spacious layout with a king-sized bed, a private balcony, and an en-suite jacuzzi. Perfect for an indulgent stay.",
+    },
+    {
+      id: 2,
+      title: "Premium Room",
+      image: "/images/a (5).JPG",
+      alt: "premium room",
+      description: "A premium experience with comfortable spaces and high-end finishes.",
+      paragraph: "Our Premium Room features a queen-sized bed, a cozy lounge area, and a modern bathroom for your relaxation.",
+    },
+  ];
+
   return (
-    <div className="bg-white min-h-screen p-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="mb-8">
-          <h2 className="text-2xl font-medium tracking-widest text-gray-700">
-            THE CASTLE RESORT MANALI
-          </h2>
-          <h1 className="text-6xl font-serif font-bold mt-2 text-gray-900">Rooms & <em className='text-red-800 italic font-serif'>Suites</em></h1>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {rooms.map((room, idx) => (
-            <div key={idx} className="flip-card h-[450px] rounded-lg overflow-hidden shadow-lg group relative">
-              <div className="flip-card-inner w-full h-full">
-                {/* FRONT */}
-                <div
-                  className="flip-card-front w-full h-full relative flex flex-col justify-end"
-                  style={{
-                    backgroundImage: `url(${room.image})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    height: '100%', // Ensure it takes full height
-                  }}
-                >
-                  <div className="absolute bottom-6 left-0 w-full text-center z-10">
-                    <span className="text-white text-3xl font-serif shadow-lg drop-shadow-lg">{room.title}</span>
-                  </div>
-                  <div className="absolute inset-0 bg-black bg-opacity-20 pointer-events-none"></div>
-                </div>
-                {/* BACK */}
-                <div className="flip-card-back w-full h-full flex flex-col justify-center items-center bg-[#212121] p-8">
-                  <h3 className="text-white text-3xl font-serif mb-4">{room.title}</h3>
-                  {room.features ? (
-                    <ul className="text-gray-200 text-lg text-left list-disc list-inside space-y-1">
-                      {room.features.map((feature, fIdx) => (
-                        <li key={fIdx}>{feature}</li>
-                      ))}
-                    </ul>
-                  ) : null}
-                  {room.button && (
-                    <button className="mt-4 px-6 py-2 bg-red-600 text-white font-semibold rounded-lg">
-                      Book Now
-                    </button>
-                  )}
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
+    <section className="py-2 bg-white text-black">
+      {/* Section Title */}
+      <div className="text-center mb-12">
+        <h2 className="text-5xl font-bold text-black">
+          Our <em className="text-red-800 font-bold">Rooms</em>
+        </h2>
+        <p className="mt-2 text-lg text-black">
+          Choose from our exclusive rooms for a memorable stay.
+        </p>
       </div>
-    </div>
+
+      {/* Room Categories Layout */}
+      <div className="grid max-w-6xl mx-auto grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+        {/* Rooms Counter */}
+        <div
+          ref={sectionRef} 
+          className="flex flex-col items-center p-6 rounded-lg shadow-2xl hover:shadow-3xl transition-all duration-300 ease-in-out bg-gradient-to-r from-red-700 to-red-800 text-white"
+        >
+          <div className="relative">
+            <h3 className="mt-4 text-5xl lg:text-[10rem] font-semibold">
+              {count}
+              <sup className="absolute top-0 right-[-18] text-[5rem] text-red-900">
+                {''}
+              </sup>
+            </h3>
+          </div>
+          <p className="mt-12 text-md font-light text-center">
+  Discover the Perfect Room for Your Stay <br />
+  Whether you're looking for a luxurious getaway or a cozy retreat, we have rooms tailored to meet your needs. Experience comfort, convenience, and exceptional service at every turn.
+</p>
+ 
+          
+        </div>
+
+        {/* Render Room Categories with Unique Keys */}
+        {roomCategories.map((room) => (
+          <div
+            key={room.id}
+            className="flex flex-col items-center p-6 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 ease-in-out bg-white text-black hover:scale-105 transform"
+          >
+            {/* Image with Gradient Overlay */}
+            <div className="relative w-full h-56 mb-4 overflow-hidden rounded-lg shadow-lg hover:scale-105 transition-all duration-300 ease-in-out">
+              <img
+                src={room.image}
+                alt={room.alt}
+                className="w-full h-full object-cover rounded-lg"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black opacity-30"></div>
+            </div>
+            <h3 className="mt-4 text-xl font-semibold text-center">{room.title}</h3>
+            {room.description && <p className="mt-2 text-center text-lg">{room.description}</p>}
+            {room.paragraph && <p className="mt-2 text-center text-black/70">{room.paragraph}</p>}
+          </div>
+        ))}
+      </div>
+    </section>
   );
-}
+};
+
+export default RoomSection;

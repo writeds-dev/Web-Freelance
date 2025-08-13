@@ -25,17 +25,17 @@ export default function Footer() {
           <h3 className="text-lg font-semibold text-gray-800 mb-4">Contact Us</h3>
           <ul className="space-y-2 text-sm text-gray-700">
             <li>
-              <a href="mailto:info@faguresort.com" className="hover:underline">
-                info@faguresort.com
+              <a href="mailto:thecastlevilla6@gmail.com" className="hover:underline">
+                thecastlevilla6@gmail.com
               </a>
             </li>
             <li>
-              <a href="tel:+911234567890" className="hover:underline">
-                +91 12345 67890
+              <a href="tel:+919805260347, 8350888932" className="hover:underline">
+                +91 9805260347, 8350888932
               </a>
             </li>
             <li>
-              Fagu, Shimla, Himachal Pradesh 171209, India
+             Kanyal Road, Simsa Village, near Volvo bus stand, Manali, Kullu District, Himachal Pradesh 175131, India
             </li>
           </ul>
         </div>
