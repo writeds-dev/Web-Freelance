@@ -61,7 +61,6 @@ const App = () => {
               <Gallery />
               <Works />
               <RecentListings />
-              <RecentPosts />
               <FAQ />
             </>
           }

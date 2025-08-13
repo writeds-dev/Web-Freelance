@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; // Import Link
 
 const services = [
   {
@@ -19,16 +20,15 @@ const services = [
     img: "/images/a (7).JPG",
     reverse: true,
   },
- {
-  title: "Hiking & Adventure",
-  subtitle: "Explore The Outdoors",
-  description:
-    "Embark on breathtaking hikes and thrilling adventures around Manali. Discover scenic trails, lush forests, and panoramic views as you connect with nature. Our resort offers guided tours and all the essentials for a safe and memorable outdoor experience.",
-  button: "View Details",
-  img: "/images/a (9).JPG", // Example hiking image
-  reverse: false, // image left, content right
-}
-
+  {
+    title: "Hiking & Adventure",
+    subtitle: "Explore The Outdoors",
+    description:
+      "Embark on breathtaking hikes and thrilling adventures around Manali. Discover scenic trails, lush forests, and panoramic views as you connect with nature. Our resort offers guided tours and all the essentials for a safe and memorable outdoor experience.",
+    button: "View Details",
+    img: "/images/a (9).JPG",
+    reverse: false,
+  }
 ];
 
 export default function BestServices() {
@@ -56,6 +56,7 @@ export default function BestServices() {
                   className="object-cover w-full h-full"
                 />
               </div>
+
               {/* Text */}
               <div className="w-full md:w-1/2 flex flex-col justify-center p-8 bg-[#f5f2ed]">
                 <span className="uppercase tracking-[.2em] text-md font-medium text-gray-600 mb-2">
@@ -67,9 +68,15 @@ export default function BestServices() {
                 <p className="text-gray-700 mb-6 leading-relaxed">
                   {service.description}
                 </p>
-                <button className="px-6 py-2 bg-blue-500 hover:bg-blue-600 text-white uppercase tracking-wide font-medium rounded shadow transition">
+                
+                {/* Redirect button */}
+                <Link
+                  to="/book"
+                  className="px-6 py-2 bg-blue-500 hover:bg-blue-600 text-white uppercase tracking-wide font-medium rounded shadow transition"
+                >
                   {service.button}
-                </button>
+                </Link>
+
               </div>
             </div>
           ))}
