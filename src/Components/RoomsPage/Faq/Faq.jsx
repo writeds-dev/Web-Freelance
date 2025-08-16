@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 
 const faqs = [
@@ -34,60 +34,80 @@ const faqs = [
   },
 ];
 
-const FAQ = () => {
-  const [openIndex, setOpenIndex] = useState(null);
+export default function FAQ() {
+  // JSX version: no generics
+  const [open, setOpen] = useState(0); // start with the first item open; use null for none
 
   return (
-    <section className="py-16 px-4 min-h-[60vh] bg-gray-50">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">
-          <span className="text-red-600">Your Questions</span> Answered
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {faqs.map((faq, idx) => ( <div
-              key={idx}
-              className={`rounded-lg border-2 p-1 transition-all duration-300 ease-in-out ${
-                openIndex === idx
-                  ? "border-red-600 bg-white shadow-lg"
-                  : "border-gray-300 hover:border-red-600 hover:shadow-md"
-              }`}
-            >
-              <button
-                className="flex w-full items-center gap-4 px-6 py-5 text-left group"
-                onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
-                aria-expanded={openIndex === idx}
-                aria-controls={`faq-item-${idx}`}
-              >
-                <span
-                  className={`w-10 h-10 flex items-center justify-center rounded-full font-bold text-white bg-red-600`}
+    <section className="py-14 px-4 bg-gray-50">
+      <div className="max-w-4xl mx-auto">
+        <header className="text-center mb-10">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+            <span className="text-red-700">Your Questions</span> Answered
+          </h2>
+          <p className="mt-3 text-gray-600">
+            Quick answers to the most common questions about your stay.
+          </p>
+        </header>
+
+        <ul className="space-y-3" role="list">
+          {faqs.map((item, idx) => {
+            const isOpen = open === idx;
+            const contentId = `faq-panel-${idx}`;
+            const buttonId = `faq-button-${idx}`;
+
+            return (
+              <li key={idx} className="bg-white rounded-xl border border-gray-200">
+                <button
+                  id={buttonId}
+                  aria-expanded={isOpen}
+                  aria-controls={contentId}
+                  onClick={() => setOpen(isOpen ? null : idx)}
+                  className="w-full flex items-center gap-3 text-left px-5 py-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-600 rounded-xl"
                 >
-                  {idx + 1}
-                </span>
-                <span className="flex-1 text-lg md:text-xl font-medium text-gray-800">
-                  {faq.question}
-                </span>
-                <ChevronDownIcon
-                  className={`w-6 h-6 ml-2 transition-transform duration-300 group-hover:text-red-600 ${
-                    openIndex === idx ? "rotate-180 text-red-600" : "text-gray-500"
-                  }`}
-                />
-              </button>
-              <div
-                id={`faq-item-${idx}`}
-                className={`px-6 pt-0 pb-5 text-gray-600 text-base transition-all duration-300 ease-in-out ${
-                  openIndex === idx
-                    ? "max-h-64 opacity-100"
-                    : "max-h-0 opacity-0 overflow-hidden"
-                }`}
-              >
-                {faq.answer}
-              </div>
-            </div>
-          ))}
+                  <span
+                    className={`inline-flex h-7 w-7 items-center justify-center rounded-full text-xs font-semibold ${
+                      isOpen ? "bg-red-600 text-white" : "bg-gray-200 text-gray-800"
+                    }`}
+                  >
+                    {idx + 1}
+                  </span>
+
+                  <span className="flex-1 font-medium text-gray-900">{item.question}</span>
+
+                  <ChevronDownIcon
+                    className={`h-5 w-5 text-gray-500 transition-transform duration-300 ${
+                      isOpen ? "rotate-180 text-red-600" : ""
+                    }`}
+                    aria-hidden="true"
+                  />
+                </button>
+
+                <div
+                  id={contentId}
+                  role="region"
+                  aria-labelledby={buttonId}
+                  className={`px-5 pt-0 overflow-hidden transition-[grid-template-rows] duration-300 ease-out grid ${
+                    isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+                  } motion-reduce:transition-none`}
+                >
+                  <div className="min-h-0">
+                    <p className="pb-4 text-gray-700 leading-relaxed">{item.answer}</p>
+                  </div>
+                </div>
+              </li>
+            );
+          })}
+        </ul>
+
+        <div className="mt-8 text-center text-sm text-gray-600">
+          Still curious?{" "}
+          <a href="/contact" className="text-red-700 font-medium hover:underline">
+            Contact our team
+          </a>
+          .
         </div>
       </div>
     </section>
   );
-};
-
-export default FAQ;
+}

@@ -5,6 +5,7 @@ import Testimonial from "../../Components/RoomsPage/Testimonial/Testimonial";
 import FAQ from "../../Components/RoomsPage/Faq/Faq";
 import RoomsVideoSection from "../../Components/RoomsPage/Vedio/Video";
 import NearbyPlaces from "../../Components/RoomsPage/Places/Places";
+import ServicesShowcase from "../../Components/RoomsPage/Services/Service";
 
 const Room = () => {
   return (
@@ -27,9 +28,10 @@ const Room = () => {
       Rooms & Suites
     </h1>
     {/* Subtitle */}
-    <p className="text-white/90 text-xl md:text-2xl mb-6 max-w-2xl drop-shadow">
-      Welcome to your peaceful escape. Discover spacious suites and cozy cottages surrounded by nature, comfort, and elegance.
-    </p>
+   <p className="text-white/90 text-xl md:text-2xl mb-6 max-w-2xl drop-shadow">
+  Experience the ultimate getaway. Explore luxurious villas offering stunning views, serene surroundings, and unmatched comfort.
+</p>
+
     {/* CTA Button */}
     <a
       href="/booking"
@@ -49,6 +51,7 @@ const Room = () => {
       <RoomsVideoSection/>
       <MealTimes/>
       <Testimonial/>
+      <ServicesShowcase/>
       <FAQ/>
     </div>
   );

@@ -1,22 +1,24 @@
-
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
 
 export default function Footer() {
+  const year = new Date().getFullYear();
+
   return (
     <footer className="bg-gray-100 py-12 px-6 md:px-12 lg:px-24 border-t border-gray-300">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Logo & About */}
         <div>
           <img
-            width={160}
-            height={62}
-            src="https://www.thecastleresort.com/img/logo-dark.png"
-            alt="Hotel Logo"
+            width={180}
+            height={70}
+            src="https://www.thecastleresort.com/img/logo-dark.png" // ← replace with your logo asset
+            alt="Castle Villas Manali"
             className="mb-4"
           />
           <p className="mt-6 text-sm text-gray-700">
-            Nestled in the heart of the Himalayas, our Fagu Shimla Resort is the perfect getaway for relaxation, adventure, and breathtaking mountain views.
+            Tucked away in the Himalayas, <strong>Castle Villas</strong> in Manali blends privacy,
+            comfort, and warm hospitality—your serene base for mountain views, local adventures, and slow mornings.
           </p>
         </div>
 
@@ -29,13 +31,24 @@ export default function Footer() {
                 thecastlevilla6@gmail.com
               </a>
             </li>
-            <li>
-              <a href="tel:+919805260347, 8350888932" className="hover:underline">
-                +91 9805260347, 8350888932
+            <li className="flex flex-col">
+              <a href="tel:+919805260347" className="hover:underline">
+                +91 9805260347
+              </a>
+              <a href="tel:+918350888932" className="hover:underline">
+                +91 8350888932
               </a>
             </li>
             <li>
-             Kanyal Road, Simsa Village, near Volvo bus stand, Manali, Kullu District, Himachal Pradesh 175131, India
+              <a
+                href="https://maps.google.com/?q=Kanyal+Road,+Simsa+Village,+near+Volvo+bus+stand,+Manali,+Kullu+District,+Himachal+Pradesh+175131,+India"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline"
+              >
+                Kanyal Road, Simsa Village, near Volvo bus stand, Manali, Kullu District,
+                Himachal Pradesh 175131, India
+              </a>
             </li>
           </ul>
         </div>
@@ -45,7 +58,7 @@ export default function Footer() {
           <h3 className="text-lg font-semibold text-gray-800 mb-4">Follow Us</h3>
           <div className="flex space-x-4">
             <a
-              href="https://www.instagram.com/yourhotel"
+              href="https://www.instagram.com/castlevillas" // ← update to your real handle
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
@@ -54,7 +67,7 @@ export default function Footer() {
               <FaInstagram size={24} />
             </a>
             <a
-              href="https://www.facebook.com/yourhotel"
+              href="https://www.facebook.com/castlevillas" // ← update to your real page
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
@@ -63,16 +76,16 @@ export default function Footer() {
               <FaFacebook size={24} />
             </a>
             <a
-              href="https://twitter.com/yourhotel"
+              href="https://twitter.com/castlevillas" // ← update to your real handle
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Twitter"
+              aria-label="Twitter (X)"
               className="text-black hover:text-black"
             >
               <BsTwitterX size={24} />
             </a>
             <a
-              href="https://www.youtube.com/yourhotel"
+              href="https://www.youtube.com/@castlevillas" // ← update to your real channel
               target="_blank"
               rel="noopener noreferrer"
               aria-label="YouTube"
@@ -87,9 +100,9 @@ export default function Footer() {
       {/* Legal Info */}
       <div className="max-w-7xl mx-auto mt-10 text-center text-xs text-gray-600 border-t border-gray-300 pt-6">
         <p>
-          &copy; {new Date().getFullYear()} Fagu Shimla Resort |{" "}
+          &copy; {year} Castle Villas, Manali&nbsp;|{" "}
           <a href="/terms" className="hover:underline">
-            Terms & Conditions
+            Terms &amp; Conditions
           </a>{" "}
           |{" "}
           <a href="/privacy" className="hover:underline">
@@ -98,7 +111,7 @@ export default function Footer() {
         </p>
 
         <p className="mt-4">
-          All rights reserved. The images used are for representation purposes only.
+          All rights reserved.
         </p>
       </div>
     </footer>

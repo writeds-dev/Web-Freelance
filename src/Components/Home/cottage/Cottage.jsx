@@ -14,7 +14,7 @@ const CombinedSection = () => (
       {/* LEFT SIDE: Cottage Facilities */}
       <div className="flex-1 flex flex-col justify-center p-6">
         <h2 className="text-4xl font-bold mb-6 text-center lg:text-center pt-6 text-gray-900">
-          Cottage <em className="text-red-800 not-italic">Facilities</em>
+          Villa's <em className="text-red-800 not-italic">Facilities</em>
         </h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-8">
           <div className="flex flex-col items-center">

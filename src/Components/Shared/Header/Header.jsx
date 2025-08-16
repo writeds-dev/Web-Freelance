@@ -84,7 +84,7 @@ const Header = () => {
             <li>
               <Link
                 to="/book"
-                className="text-black text-lg font-semibold hover:bg-yellow-400 hover:text-black px-4 py-2 rounded-full transition-all duration-300"
+                className="text-black bg-yellow-400 text-lg font-semibold hover:bg-yellow-200 hover:text-black px-4 py-2 rounded-full transition-all duration-300"
                 onClick={handleLinkClick}
               >
                 Book Now

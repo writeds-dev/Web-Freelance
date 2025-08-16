@@ -2,14 +2,14 @@ import React from "react";
 
 const NearbyPlaces = () => {
   const places = [
-    { name: "Solang Valley", imageUrl: "/new/solang.jpg", time: "15 Minutes Drive" },
-    { name: "Rohtang Pass", imageUrl: "/new/rohtang.jpg", time: "50 Minutes Drive" },
-    { name: "Naggar", imageUrl: "/new/naggar.jpg", time: "30 Minutes Drive" },
-    { name: "Old Manali", imageUrl: "/new/manali.jpg", time: "20 Minutes Drive" },
-    { name: "Hadimba Temple", imageUrl: "/new/h-2 (2).jpg", time: "25 Minutes Drive" },
-    { name: "Manu Temple", imageUrl: "/new/h-1.jpeg", time: "30 Minutes Drive" },
-    { name: "Bhrigu Lake", imageUrl: "/new/d-4.jpg", time: "40 Minutes Drive" },
-    { name: "Parvati Valley", imageUrl: "/new/d-3.jpg", time: "45 Minutes Drive" },
+    { name: "Solang Valley", imageUrl: "/new/solang.jpg"},
+    { name: "Rohtang Pass", imageUrl: "/new/rohtang.jpg" },
+    { name: "Naggar", imageUrl: "/new/naggar.jpg"},
+    { name: "Old Manali", imageUrl: "/new/manali.jpg"},
+    { name: "Hadimba Temple", imageUrl: "/new/h-2 (2).jpg", },
+    { name: "Manu Temple", imageUrl: "/new/h-1.jpeg",},
+    { name: "Bhrigu Lake", imageUrl: "/new/d-4.jpg",},
+    { name: "Parvati Valley", imageUrl: "/new/d-3.jpg", }
   ];
 
   return (

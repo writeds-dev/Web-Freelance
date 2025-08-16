@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom'; // Import Link
 
 const services = [
   {
-    title: "Dining",
-    subtitle: "Restaurant",
-    description:
-      "The dining hall with its majestic setting lends enchantment to a cozy meal. Its sun decks are an ideal place to enjoy a lazy late morning breakfast. The Resort serves Indian, Chinese & Continental cuisine.",
-    button: "View Details",
-    img: "/images/a (21).JPG",
-    reverse: false,
-  },
+  title: "Best Stay in Manali",
+  subtitle: "Comfort Meets Nature",
+  description:
+    "Wake up to snow-capped mountain views, crisp Himalayan air, and the soothing sound of nature. Our spacious rooms blend modern comfort with rustic charm, offering cozy interiors, private balconies, and all the amenities you need for a relaxing retreat after a day of exploring Manali’s scenic beauty.",
+  button: "View Details",
+  img: "/images/a (21).JPG", // Replace with your best stay/room image
+  reverse: false,
+},
   {
     title: "Holiday Tour Package",
     subtitle: "Best Holiday Tour Package With Us",
