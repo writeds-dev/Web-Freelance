@@ -91,7 +91,7 @@ const Meals = () => {
         {/* Image Section */}
         <figure className="w-full lg:w-1/2 p-0">
           <img
-            src="/images/a (11).JPG"
+            src="/add/add-7.JPG"
             alt="Castle Villa Manali dining area with mountain view"
             className="w-full h-auto  shadow-lg object-cover"
             loading="lazy"

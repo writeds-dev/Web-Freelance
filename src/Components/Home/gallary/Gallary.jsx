@@ -1,12 +1,16 @@
 import React from 'react';
 
 const packages = [
-  { image: '/images/a (1).JPG' },
+  { image: '/images/a (22).JPG' },
   { image: '/images/a (12).JPG' },
-  { image: '/images/a (3).JPG' },
-  { image: '/images/a (23).JPG' },
-  { image: '/images/a (15).JPG' },
-  { image: '/images/a (27).JPG' },
+  { image: '/add/new-1.JPG' },
+  { image: '/add/add-2.JPG' },
+  { image: '/add/add-1.JPG' },
+  { image: '/add/add-11.JPG' },
+  { image: '/add/add-12.JPG' },
+  { image: '/add/add-14.JPG' },
+  { image: '/add/add-6.JPG' },
+  
   
   
 ];

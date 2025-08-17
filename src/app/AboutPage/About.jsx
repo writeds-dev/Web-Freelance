@@ -12,7 +12,7 @@ const About = () => {
       <div
         className="relative flex items-center justify-center h-[400px] md:h-[520px] bg-center bg-cover"
         style={{
-          backgroundImage: "url('/P/p-1.webp')",
+          backgroundImage: "url('/add/add-13.JPG')",
         }}
       >
         {/* Strong black overlay for text visibility */}

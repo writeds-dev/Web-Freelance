@@ -88,11 +88,11 @@ const BookYourVilla = () => {
 
         {/* Right section (Image with overlay) */}
         <div className="relative">
-          <div className="relative w-full h-80 sm:h-96 overflow-hidden rounded-2xl shadow-2xl border-8 border-white">
+          <div className="relative w-full h-80 sm:h-96 overflow-hidden  shadow-2xl border-8 border-white">
             <img
-              src="/images/a (18).JPG"
+              src="/add/add-11.JPG"
               alt="Private villa at Castle Villas with lush greenery and sunlit patio"
-              className="w-full h-full object-cover rounded-2xl transform scale-105 transition duration-500 hover:scale-110"
+              className="w-full h-full object-cover  transform scale-105 transition duration-500 hover:scale-110"
               loading="eager"
             />
           </div>

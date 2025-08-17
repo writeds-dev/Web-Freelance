@@ -54,9 +54,9 @@ export default function WhyBookWithUs() {
               ))}
             </ul>
             <img
-              src="/P/p-5.webp"
+              src="/add/add-5.JPG"
               alt="Elegant hotel lobby"
-              className="w-full mt-6 rounded-lg shadow-md"
+              className="w-full mt-6 shadow-md"
               style={{ maxHeight: 280, objectFit: 'cover' }}
             />
           </div>
@@ -67,7 +67,7 @@ export default function WhyBookWithUs() {
               <img
                 src="/P/p-6.webp"
                 alt="Modern hotel suite"
-                className="w-full h-auto object-cover rounded-lg shadow-lg"
+                className="w-full h-auto object-cover shadow-lg"
                 style={{ maxHeight: 350, objectFit: 'cover' }}
               />
               <div className="bottom-4 left-4 right-4 mt-5 bg-white/90 rounded-lg p-6 shadow-lg">

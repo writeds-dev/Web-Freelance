@@ -15,7 +15,7 @@ const Room = () => {
   className="relative flex items-center justify-center h-[400px] md:h-[520px] bg-center bg-cover"
   style={{
     backgroundImage:
-      "url('/images/a (25).JPG')",
+      "url('/add/add-2.JPG')",
   }}
 >
   {/* Elegant semi-gradient overlay */}
