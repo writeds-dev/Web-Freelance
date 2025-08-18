@@ -2,27 +2,59 @@ import React, { useRef } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
-// <<< Set your one WhatsApp number here >>>
-const WHATSAPP_NUMBER = "9805260347"; // e.g., "9805260347" or "8350888932"
+/**
+ * <<< SET YOUR WHATSAPP NUMBER HERE >>>
+ * Digits only, include country code, NO "+" or spaces.
+ * India example: "919805260347" (for +91 9805260347)
+ */
+const WHATSAPP_NUMBER = "919805260347";
 
+// ---------------- Validation ----------------
 const validationSchema = Yup.object({
   firstName: Yup.string().required("First Name is required."),
   lastName: Yup.string().required("Last Name is required."),
   email: Yup.string().email("Invalid email address").required("Email is required."),
-  phone: Yup.string().matches(/^[0-9+\-()\s]*$/, "Phone must be a valid number").notRequired(),
+  phone: Yup.string()
+    .matches(/^[0-9+\-()\s]*$/, "Phone must be a valid number")
+    .notRequired(),
   message: Yup.string().required("Message is required."),
 });
 
-// Normalize to digits with country code (WhatsApp expects country code without '+')
-const normalizePhone = (num) => {
-  const digits = (num || "").replace(/[^\d]/g, "");
-  return digits.startsWith("91") ? digits : `91${digits}`;
+// ---------------- Helpers ----------------
+// only digits
+const digitsOnly = (str = "") => str.replace(/[^\d]/g, "");
+
+// WhatsApp wants E.164 digits without '+'
+const normalizeWaNumber = (num) => digitsOnly(num);
+
+// encode text for WhatsApp. Some clients prefer + for spaces.
+// Newlines will be %0A automatically from encodeURIComponent.
+const encodeMessage = (text) => encodeURIComponent(text).replace(/%20/g, "+");
+
+// detect platform to pick best endpoint
+const isMobile = () => /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+const isDesktop = () => !isMobile();
+
+// Build the most compatible URL for the environment
+const buildWAUrl = (phone, text) => {
+  const to = normalizeWaNumber(phone);
+  const msg = encodeMessage(text);
+
+  // 1) Mobile devices → try native app deep link
+  if (isMobile()) {
+    // App deeplink (works best on iOS/Android when triggered by a user gesture)
+    return `whatsapp://send?phone=${to}&text=${msg}`;
+  }
+
+  // 2) Desktop → WhatsApp Web
+  return `https://web.whatsapp.com/send?phone=${to}&text=${msg}&app_absent=0`;
 };
 
-const buildWAUrl = (phone, text) => {
-  const to = normalizePhone(phone);
-  const encoded = encodeURIComponent(text);
-  return `https://api.whatsapp.com/send?phone=${to}&text=${encoded}`;
+// Some browsers/extensions block custom schemes; keep a web fallback handy
+const buildWebFallbackUrl = (phone, text) => {
+  const to = normalizeWaNumber(phone);
+  const msg = encodeMessage(text);
+  return `https://api.whatsapp.com/send?phone=${to}&text=${msg}`;
 };
 
 export default function ContactForm() {
@@ -38,28 +70,38 @@ export default function ContactForm() {
     },
     validationSchema,
     onSubmit: (values, { resetForm }) => {
-      // Include ALL fields (show "-" if empty)
+      // Compose the message (keep labels to make it readable in WA)
       const parts = [
         `First Name: ${values.firstName || "-"}`,
         `Last Name: ${values.lastName || "-"}`,
         `Email: ${values.email || "-"}`,
         `Phone: ${values.phone || "-"}`,
-        `Message: ${values.message || "-"}`,
+        "",
+        values.message || "-",
       ];
-      const rawMessage = parts.join("\n").trim();
-      const url = buildWAUrl(WHATSAPP_NUMBER, rawMessage);
+
+      // WhatsApp accepts messages up to ~4096 chars; trim if needed
+      const rawMessage = parts.join("\n").trim().slice(0, 4096);
+
+      // Pick best URL for the device, with a fallback link ready
+      const primaryUrl = buildWAUrl(WHATSAPP_NUMBER, rawMessage);
+      const fallbackUrl = buildWebFallbackUrl(WHATSAPP_NUMBER, rawMessage);
 
       try {
-        // Same tab is most reliable for keeping text payload
-        window.location.assign(url);
+        // Use same-tab navigation – most reliable for preserving the query string
+        window.location.assign(primaryUrl);
       } catch {
-        // Fallback: programmatically click a hidden anchor
+        // If custom scheme fails (or errors), fall back to https web endpoint
+        const url = fallbackUrl;
         if (waLinkRef.current) {
           waLinkRef.current.href = url;
           waLinkRef.current.click();
+        } else {
+          window.location.assign(url);
         }
       }
 
+      // optional: do NOT reset immediately if you want the user to come back to a filled form.
       resetForm();
     },
   });
@@ -70,7 +112,7 @@ export default function ContactForm() {
         KEEP IN <span className="text-red-800">TOUCH</span>
       </h3>
 
-      {/* Hidden fallback link */}
+      {/* Hidden fallback link (same-tab) */}
       <a ref={waLinkRef} href="/" target="_self" rel="noreferrer" className="hidden" />
 
       <form className="space-y-5" onSubmit={formik.handleSubmit}>
@@ -123,7 +165,7 @@ export default function ContactForm() {
           )}
         </div>
 
-        {/* Phone */}
+        {/* Phone (user's phone, not required) */}
         <div>
           <input
             className="w-full bg-transparent border-b-2 border-gray-300 placeholder-gray-500 focus:outline-none py-2 mb-2 text-black"
@@ -133,6 +175,7 @@ export default function ContactForm() {
             value={formik.values.phone}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
+            autoComplete="tel"
           />
           {formik.touched.phone && formik.errors.phone && (
             <div className="text-red-500 text-sm">{formik.errors.phone}</div>
