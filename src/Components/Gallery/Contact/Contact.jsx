@@ -12,7 +12,7 @@ const BookYourVilla = () => {
             <br />
             at{" "}
             <span className="font-serif text-black">
-              <em className="italic font-serif">Castle</em> Villas
+              <em className="italic font-serif">Castle</em> Villa
             </span>
           </h1>
 

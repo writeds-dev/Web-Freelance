@@ -5,11 +5,16 @@ const packages = [
   { image: '/images/a (12).JPG' },
   { image: '/add/new-1.JPG' },
   { image: '/add/add-2.JPG' },
+  { image: '/Delux/d-4.JPG' },
+  { image: '/Delux/d-6.JPG' },
+  { image: '/Delux/d-7.JPG' },
   { image: '/add/add-1.JPG' },
   { image: '/add/add-11.JPG' },
-  { image: '/add/add-12.JPG' },
-  { image: '/add/add-14.JPG' },
-  { image: '/add/add-6.JPG' },
+  { image: '/room/r-1.JPG' },
+  { image: '/Delux/d-8.JPG' },
+  { image: '/add/add-9.JPG' },
+  
+
   
   
   

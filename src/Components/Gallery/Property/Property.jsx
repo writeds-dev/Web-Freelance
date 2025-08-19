@@ -7,7 +7,16 @@ const packages = [
   { image: '/P/p-3.webp' },
   { image: '/P/p-4.webp' },
   { image: '/P/p-5.webp' },
-  { image: '/P/p-6.webp' },
+  { image: '/room/r-1.JPG' },
+  { image: '/room/r-3.JPG' },
+  { image: '/room/r-4.JPG' },
+  { image: '/room/r-5.JPG' },
+  { image: '/room/r-6.JPG' },
+  { image: '/room/r-7.JPG' },
+  { image: '/room/r-8.JPG' },
+  { image: '/room/r-9.JPG' },
+  { image: '/room/r-10.JPG' },
+
 ];
 
 const SLIDE_WIDTH = 350; // Adjust this if you change card width

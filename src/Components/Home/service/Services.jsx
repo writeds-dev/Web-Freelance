@@ -24,7 +24,7 @@ const visitingPlaces = [
   {
     name: 'Manu Temple',
     description: 'A sacred temple dedicated to the sage Manu, located in Old Manali, offering a peaceful atmosphere and stunning views of the valley.',
-    img: '/public/m-1.jpg',
+    img: '/images/m-1.jpg',
   },
   {
     name: 'Bhrigu Lake',
