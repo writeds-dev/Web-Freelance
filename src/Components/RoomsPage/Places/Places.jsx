@@ -6,8 +6,8 @@ const NearbyPlaces = () => {
     { name: "Rohtang Pass", imageUrl: "/new/rohtang.jpg" },
     { name: "Naggar", imageUrl: "/new/naggar.jpg"},
     { name: "Old Manali", imageUrl: "/new/manali.jpg"},
-    { name: "Hadimba Temple", imageUrl: "/new/h-2 (2).jpg", },
-    { name: "Manu Temple", imageUrl: "/new/h-1.jpeg",},
+    { name: "Hadimba Temple", imageUrl: "/new/h-1.jpeg", },
+    { name: "Manu Temple", imageUrl: "/public/m-1.jpg",},
     { name: "Bhrigu Lake", imageUrl: "/new/d-4.jpg",},
     { name: "Parvati Valley", imageUrl: "/new/d-3.jpg", }
   ];

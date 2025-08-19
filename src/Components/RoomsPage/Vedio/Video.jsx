@@ -12,7 +12,7 @@ const RoomsVideoSection = () => {
           </h2>
           <p className="mt-3 text-white/80 text-lg md:text-2xl max-w-2xl drop-shadow">
             Discover elegant rooms with breathtaking views.  
-            Comfort and luxury await you in every corner of The Castle Resort.
+            Comfort and luxury await you in every corner of The Castle Villa.
           </p>
         </div>
 

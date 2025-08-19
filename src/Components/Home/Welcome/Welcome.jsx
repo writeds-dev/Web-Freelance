@@ -49,7 +49,7 @@ export default function FeaturedOffers() {
             className="group relative overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-lg transition-all duration-300 hover:shadow-2xl"
           >
             {/* Media */}
-            <div className="relative h-64">
+            <div className="relative h-64 md:h-72 lg:h-80">
               <img
                 src={o.img}
                 alt={o.title}

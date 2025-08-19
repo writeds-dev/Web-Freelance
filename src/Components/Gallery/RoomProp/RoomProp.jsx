@@ -17,20 +17,28 @@ const packages = [
   { image: "/add/add-3.JPG" },
   { image: "/add/add-4.JPG" },
   { image: "/add/add-5.JPG" },
+  { image: "/Delux/d-1.JPG" },
+  { image: "/Delux/d-2.JPG" },
+  { image: "/Delux/d-3.JPG" },
+  { image: "/Delux/d-4.JPG" },
+  { image: "/Delux/d-5.JPG" },
+  { image: "/Delux/d-6.JPG" },
+  { image: "/Delux/d-7.JPG" },
+
+  
+
 ];
 
 const RoomProp = () => {
   const sliderRef = useRef(null);
   const intervalRef = useRef(null);
 
-  // match the gap utility below (gap-4 => 16px)
   const cardGap = 16;
-  const [cardWidth, setCardWidth] = useState(300);
+  const [cardWidth, setCardWidth] = useState(250); // Adjusted the width for a more compact look
   const [active, setActive] = useState(0);
   const [isHover, setIsHover] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
 
-  // Measure first card width (incl. gap)
   useEffect(() => {
     const slider = sliderRef.current;
     if (!slider) return;
@@ -48,7 +56,6 @@ const RoomProp = () => {
     return () => window.removeEventListener("resize", measure);
   }, [cardGap]);
 
-  // Update active dot on scroll
   useEffect(() => {
     const slider = sliderRef.current;
     if (!slider) return;
@@ -61,7 +68,6 @@ const RoomProp = () => {
     return () => slider.removeEventListener("scroll", onScroll);
   }, [cardWidth]);
 
-  // Pause when not visible
   useEffect(() => {
     const el = sliderRef.current;
     if (!el) return;
@@ -74,7 +80,6 @@ const RoomProp = () => {
     return () => io.disconnect();
   }, []);
 
-  // Auto-scroll
   useEffect(() => {
     const slider = sliderRef.current;
     if (!slider) return;
@@ -88,7 +93,7 @@ const RoomProp = () => {
 
     const shouldRun = !isHover && isVisible;
     if (shouldRun) {
-      intervalRef.current = setInterval(tick, 2800);
+      intervalRef.current = setInterval(tick, 3000);
     }
     return () => clearInterval(intervalRef.current);
   }, [cardWidth, isHover, isVisible]);
@@ -116,20 +121,20 @@ const RoomProp = () => {
 
   return (
     <section
-      className="relative bg-white text-gray-900 py-6 px-3 sm:px-6 md:px-8"
+      className="relative bg-gray-100 text-gray-900 py-6 px-3 sm:px-6 md:px-8"
       aria-label="Room Property Images"
     >
-      <div className="max-w-7xl mx-auto">
-        {/* Header (smaller) */}
+      <div className="max-w-5xl h-full mx-auto">
+        {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 gap-4">
           <div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight leading-tight text-[#7D0C0C]">
-              Explore <em className="italic font-serif text-black">Our</em>{" "}
+            <h2 className="text-3xl font-bold tracking-tight text-[#7D0C0C]">
+              Explore <em className="italic text-gray-700">Our</em>{" "}
               <span className="text-[#7D0C0C]">Room Images</span>
             </h2>
-            <div className="w-16 h-[3px] bg-yellow-500 mt-2 rounded" />
+            <div className="w-16 h-1 bg-yellow-500 mt-2 rounded" />
           </div>
-          <p className="text-black text-base sm:text-[1.05rem] max-w-sm leading-relaxed">
+          <p className="text-gray-700 text-base sm:text-[1.05rem] max-w-sm leading-relaxed">
             Discover our beautiful rooms, cozy beds, spacious suites, and inviting decor.
           </p>
         </div>
@@ -141,33 +146,29 @@ const RoomProp = () => {
           onMouseLeave={() => setIsHover(false)}
         >
           {/* Narrower fades */}
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-6 bg-gradient-to-r from-white to-transparent z-10" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 w-6 bg-gradient-to-l from-white to-transparent z-10" />
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-8 bg-gradient-to-r from-white to-transparent z-10" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-8 bg-gradient-to-l from-white to-transparent z-10" />
 
-          {/* Track (gap reduced to 4) */}
+          {/* Track */}
           <div
             ref={sliderRef}
-            className="flex gap-4 overflow-x-auto no-scrollbar scroll-smooth py-1"
+            className="flex gap-6 overflow-x-auto no-scrollbar py-2"
             style={{ scrollSnapType: "x mandatory" }}
           >
             {packages.map((pkg, index) => (
               <div
                 key={index}
                 data-card
-                className="relative min-w-[220px] sm:min-w-[260px] md:min-w-[300px] lg:min-w-[340px]
-                           max-w-[85vw] w-full aspect-[3/2] overflow-hidden
-                           bg-white shadow border border-gray-100
-                           rounded-lg transform transition duration-300 group flex-shrink-0
-                           scroll-snap-align-start"
+                className="relative min-w-[250px] max-w-[85vw] w-full aspect-[3/2] bg-white shadow-lg rounded-xl transform transition duration-300 group flex-shrink-0 overflow-hidden"
               >
                 <img
                   src={pkg.image}
                   alt={`Room Property Image ${index + 1}`}
-                  className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-[1.02]"
+                  className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
                   loading="lazy"
                 />
-                <div className="pointer-events-none absolute inset-x-0 bottom-0 p-2 opacity-0 group-hover:opacity-100 transition">
-                  <div className="inline-block rounded bg-black/55 text-white text-[10px] px-1.5 py-0.5">
+                <div className="pointer-events-none absolute inset-x-0 bottom-0 p-4 opacity-0 group-hover:opacity-100 transition">
+                  <div className="inline-block rounded bg-black/60 text-white text-sm px-2 py-1">
                     Image {index + 1}
                   </div>
                 </div>
@@ -175,33 +176,33 @@ const RoomProp = () => {
             ))}
           </div>
 
-          {/* Smaller controls */}
+          {/* Navigation Arrows */}
           <button
             onClick={prev}
             aria-label="Previous"
-            className="absolute left-1.5 top-1/2 -translate-y-1/2 z-20 inline-flex h-8 w-8 items-center justify-center rounded-full bg-white/90 hover:bg-white shadow text-lg"
+            className="absolute left-4 top-1/2 -translate-y-1/2 z-20 inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#7D0C0C] text-white shadow-lg hover:bg-[#B32A2A] transition duration-300"
           >
             ‹
           </button>
           <button
             onClick={next}
             aria-label="Next"
-            className="absolute right-1.5 top-1/2 -translate-y-1/2 z-20 inline-flex h-8 w-8 items-center justify-center rounded-full bg-white/90 hover:bg-white shadow text-lg"
+            className="absolute right-4 top-1/2 -translate-y-1/2 z-20 inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#7D0C0C] text-white shadow-lg hover:bg-[#B32A2A] transition duration-300"
           >
             ›
           </button>
 
-          {/* Smaller dots */}
-          <div className="mt-4 flex items-center justify-center gap-1.5">
+          {/* Dots Navigation */}
+          <div className="mt-6 flex justify-center gap-3">
             {packages.map((_, i) => (
               <button
                 key={i}
                 aria-label={`Go to slide ${i + 1}`}
                 onClick={() => goTo(i)}
-                className={`h-2 rounded-full transition-all ${
+                className={`h-3 w-3 rounded-full transition-all ${
                   active === i
-                    ? "w-5 bg-[#7D0C0C]"
-                    : "w-2 bg-gray-300 hover:bg-gray-400"
+                    ? "bg-[#7D0C0C] scale-125"
+                    : "bg-gray-300 hover:bg-gray-400"
                 }`}
               />
             ))}

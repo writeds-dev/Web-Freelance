@@ -12,12 +12,12 @@ export default function Footer() {
           <img
             width={180}
             height={70}
-            src="https://www.thecastleresort.com/img/logo-dark.png" // ← replace with your logo asset
+            src="/public/c-2.png" // ← replace with your logo asset
             alt="Castle Villas Manali"
             className="mb-4"
           />
           <p className="mt-6 text-sm text-gray-700">
-            Tucked away in the Himalayas, <strong>Castle Villas</strong> in Manali blends privacy,
+            Tucked away in the Himalayas, <strong>Castle Villa</strong> in Manali blends privacy,
             comfort, and warm hospitality—your serene base for mountain views, local adventures, and slow mornings.
           </p>
         </div>
@@ -100,7 +100,7 @@ export default function Footer() {
       {/* Legal Info */}
       <div className="max-w-7xl mx-auto mt-10 text-center text-xs text-gray-600 border-t border-gray-300 pt-6">
         <p>
-          &copy; {year} Castle Villas, Manali&nbsp;|{" "}
+          &copy; {year} Castle Villa, Manali&nbsp;|{" "}
           <a href="/terms" className="hover:underline">
             Terms &amp; Conditions
           </a>{" "}

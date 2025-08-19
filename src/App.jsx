@@ -1,6 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { FaWhatsapp } from 'react-icons/fa'; // WhatsApp icon from react-icons
-import { HiChatAlt2 } from 'react-icons/hi'; // Chatbot icon from react-icons
 import { useEffect } from 'react';
 
 import Header1 from './Components/Shared/Header/Header';
@@ -16,7 +15,6 @@ import Gallery from './Components/Home/gallary/Gallary';
 import WelCome from './Components/Home/Welcome/Welcome';
 import RecentListings from './Components/Home/service/Services';
 import Works from './Components/Home/work/Work';
-import RecentPosts from './Components/Home/blogs/blogs';
 import VideoPlayer from './Components/Home/video/Video'; 
 import FAQ from './Components/Home/Faq/Faq'; 
 import Marquee from './Components/Home/Marquee/Marquee';
@@ -26,6 +24,8 @@ import Room from './app/RoomsPage/Room';
 import GalleryPage from './app/GalleryPage/GalleryPage';
 import About from './app/AboutPage/About';
 import Book from './app/BookNowPage/Book';
+
+import ScrollToTop from './Components/Scroll/Scroll';
 
 const App = () => {
   // Dynamically loading the Tawk.to script using useEffect
@@ -45,6 +45,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <Header1 />
+      <ScrollToTop /> {/* Include the ScrollToTop component here */}
       <Routes>
         <Route
           path="/"

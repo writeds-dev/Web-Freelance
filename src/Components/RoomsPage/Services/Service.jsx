@@ -1,7 +1,7 @@
 // ServicesShowcase.jsx
 // Fully responsive + a11y + mobile-friendly tap targets
 
-import React from "react";
+
 
 const items = [
   {

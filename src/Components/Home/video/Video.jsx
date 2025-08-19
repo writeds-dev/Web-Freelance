@@ -9,7 +9,7 @@ const VideoPlayer = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent z-10 pointer-events-none" />
         <div className="absolute left-0 bottom-0 z-20 p-8">
           <h2 className="text-3xl md:text-5xl font-bold text-white drop-shadow">
-            Experience The Castle Resort
+            Experience The Castle Villa
           </h2>
           <p className="mt-3 text-white/80 text-lg md:text-2xl max-w-2xl drop-shadow">
             Enjoy a stunning aerial view of our exclusive resort property.  

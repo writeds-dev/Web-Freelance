@@ -22,6 +22,16 @@ const superDeluxeImages = [
   "/images/a (13).JPG",
   "/images/a (21).JPG",
   "/images/a (17).JPG",
+  "/Delux/d-1.JPG",
+  "/Delux/d-2.JPG",
+  "/Delux/d-3.JPG",
+  "/Delux/d-4.JPG",
+  "/Delux/d-5.JPG",
+  "/Delux/d-6.JPG",
+  "/Delux/d-7.JPG",
+  "/Delux/d-8.JPG",
+  "/Delux/d-9.JPG",
+  "/Delux/d-10.JPG",
 ];
 
 const amenities = [

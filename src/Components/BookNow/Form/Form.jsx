@@ -54,7 +54,7 @@ const ContactSection = () => {
           <div className="bg-white rounded shadow overflow-hidden flex h-[300px] sm:h-[400px] md:h-full">
             <iframe
               title="Hotel Location"
-              src="https://www.google.com/maps?q=Shimla&output=embed"
+              src="https://www.google.com/maps?q=manali&output=embed"
               className="w-full h-full border-0"
               allowFullScreen=""
               loading="lazy"

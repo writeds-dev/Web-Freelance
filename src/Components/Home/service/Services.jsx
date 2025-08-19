@@ -9,7 +9,7 @@ const visitingPlaces = [
   {
     name: 'Hadimba Temple',
     description: 'A famous ancient temple surrounded by cedar forests, dedicated to the goddess Hadimba, showcasing unique architecture.',
-    img: '/new/h-2 (2).jpg',
+    img: '/new/h-1.jpeg',
   },
   {
     name: 'Rohtang Pass',
@@ -24,7 +24,7 @@ const visitingPlaces = [
   {
     name: 'Manu Temple',
     description: 'A sacred temple dedicated to the sage Manu, located in Old Manali, offering a peaceful atmosphere and stunning views of the valley.',
-    img: '/new/h-1.jpeg',
+    img: '/public/m-1.jpg',
   },
   {
     name: 'Bhrigu Lake',
