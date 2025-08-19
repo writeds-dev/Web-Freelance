@@ -20,7 +20,7 @@ const Header = () => {
         <div className="flex items-center">
           <Link to="/" className="text-black text-2xl font-bold hover:opacity-80 transition-all duration-300">
             <img
-              src="/public/c-2.png"
+              src="/images/c-2.png"
               alt="Hotel Logo"
               className="h-12"
             />

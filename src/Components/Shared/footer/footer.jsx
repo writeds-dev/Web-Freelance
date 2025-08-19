@@ -12,7 +12,7 @@ export default function Footer() {
           <img
             width={180}
             height={70}
-            src="/public/c-2.png" // ← replace with your logo asset
+            src="/images/c-2.png" // ← replace with your logo asset
             alt="Castle Villas Manali"
             className="mb-4"
           />
