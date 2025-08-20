@@ -79,21 +79,7 @@ export default function FeaturedOffers() {
               {/* CTA Row */}
               <div className="mt-5 flex items-center gap-3">
                 <a
-                  href={o.href}
-                  className="inline-flex items-center gap-2 rounded-full bg-red-600 text-white px-5 py-2 text-sm font-semibold shadow hover:bg-red-700 transition"
-                >
-                  Book Now
-                  <svg
-                    className="h-4 w-4"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path d="M12 4l1.41 1.41L8.83 10H20v2H8.83l4.58 4.59L12 18l-8-8 8-8z" />
-                  </svg>
-                </a>
-                <a
-                  href={o.href}
+                  href="/room"
                   className="inline-flex items-center gap-2 rounded-full border border-gray-300 text-gray-800 px-5 py-2 text-sm font-semibold hover:bg-gray-50 transition"
                 >
                   Learn More
