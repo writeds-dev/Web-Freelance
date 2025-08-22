@@ -103,20 +103,12 @@ const Header = () => {
               <FaFacebook size={18} color="white" />
             </a>
             <a
-              href="https://www.instagram.com"
+              href="https://www.instagram.com/castle_villa_manali/"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-pink-500 hover:bg-pink-600 p-2 rounded-full transition-all duration-300 transform hover:scale-110"
             >
               <FaInstagram size={18} color="white" />
-            </a>
-            <a
-              href="https://www.twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-blue-400 hover:bg-blue-500 p-2 rounded-full transition-all duration-300 transform hover:scale-110"
-            >
-              <FaTwitter size={18} color="white" />
             </a>
             <a
               href="https://wa.me/918350888932"

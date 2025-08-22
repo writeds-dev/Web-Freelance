@@ -3,8 +3,8 @@ import React from "react";
 
 const VideoPlayer = () => {
   return (
-    <section className="relative min-h-screen w-full py-12 flex justify-center items-center ">
-      <div className="relative w-full max-w-6xl  overflow-hidden shadow-2xl border border-gray-200">
+    <section className="relative min-h-screen w-full  flex justify-center items-center ">
+      <div className="relative w-full max-w-7xl  overflow-hidden shadow-2xl border border-gray-200">
         {/* Overlay content */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent z-10 pointer-events-none" />
         <div className="absolute left-0 bottom-0 z-20 p-8">

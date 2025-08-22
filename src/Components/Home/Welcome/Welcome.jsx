@@ -6,7 +6,7 @@ const offers = [
     desc:
       "Experience the refreshing summer breeze and scenic beauty of Manali. Stay at our luxurious resort villa and enjoy nature at its best.",
     img: "/images/a (9).JPG",
-    href: "#",
+    href: "/rooms",
     badge: "Seasonal",
   },
   {
@@ -22,14 +22,14 @@ const offers = [
     desc:
       "Our Signature Collection offers exclusive villas designed for ultimate luxury. Nestled amidst the Himalayan foothills.",
     img: "/images/a (27).JPG",
-    href: "#",
+    href: "/rooms",
     badge: "Exclusive",
   },
 ];
 
 export default function FeaturedOffers() {
   return (
-    <section className="py-14 px-6 sm:px-8 lg:px-16 bg-white">
+    <section className=" px-6 sm:px-8 lg:px-16 bg-white">
       <header className="max-w-3xl mx-auto text-center mb-10">
         <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">
           Exclusive <span className="text-red-600">Offers</span>
@@ -46,7 +46,7 @@ export default function FeaturedOffers() {
         {offers.map((o, i) => (
           <li
             key={i}
-            className="group relative overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-lg transition-all duration-300 hover:shadow-2xl"
+            className="group relative overflow-hidden  border border-gray-100 bg-white shadow-lg transition-all duration-300 hover:shadow-2xl"
           >
             {/* Media */}
             <div className="relative h-64 md:h-72 lg:h-80">
@@ -68,7 +68,7 @@ export default function FeaturedOffers() {
             <div className="p-6">
               <h3 className="text-xl font-semibold text-gray-900">
                 <a
-                  href={o.href}
+                  href="/rooms"
                   className="hover:text-red-600 transition-colors"
                 >
                   {o.title}
@@ -79,7 +79,7 @@ export default function FeaturedOffers() {
               {/* CTA Row */}
               <div className="mt-5 flex items-center gap-3">
                 <a
-                  href="/room"
+                  href="/rooms"
                   className="inline-flex items-center gap-2 rounded-full border border-gray-300 text-gray-800 px-5 py-2 text-sm font-semibold hover:bg-gray-50 transition"
                 >
                   Learn More

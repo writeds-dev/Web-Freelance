@@ -34,7 +34,7 @@ const Room = () => {
 
     {/* CTA Button */}
     <a
-      href="/booking"
+      href="/book`"
       className="inline-block bg-red-600 hover:bg-red-700 text-white text-lg font-bold rounded-full px-8 py-3 transition mt-2 shadow-lg"
     >
       Book Now

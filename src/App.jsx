@@ -17,8 +17,6 @@ import RecentListings from './Components/Home/service/Services';
 import Works from './Components/Home/work/Work';
 import VideoPlayer from './Components/Home/video/Video'; 
 import FAQ from './Components/Home/Faq/Faq'; 
-import Marquee from './Components/Home/Marquee/Marquee';
-
 // Pages for routes
 import Room from './app/RoomsPage/Room';
 import GalleryPage from './app/GalleryPage/GalleryPage';
@@ -56,7 +54,6 @@ const App = () => {
               <RoomsSuites />
               <Cottage />
               <BestServices />
-              <Marquee/>
               <VideoPlayer />
               <WelCome />
               <Gallery />

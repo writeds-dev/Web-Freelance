@@ -100,13 +100,13 @@ const RoomSection = () => {
         {roomCategories.map((room) => (
           <div
             key={room.id}
-            className="flex flex-col items-center p-6 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 ease-in-out bg-white text-black hover:scale-105 transform"
+            className="flex flex-col items-center p-6  hover:shadow-2xl transition-all duration-300 ease-in-out bg-white text-black hover:scale-105 transform"
           >
-            <div className="relative w-full h-56 mb-4 overflow-hidden rounded-lg shadow-lg hover:scale-105 transition-all duration-300 ease-in-out">
+            <div className="relative w-full h-56 mb-4 overflow-hidden hover:scale-105 transition-all duration-300 ease-in-out">
               <img
                 src={room.image}
                 alt={room.alt}
-                className="w-full h-full object-cover rounded-lg"
+                className="w-full h-full object-cover "
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black opacity-30"></div>
             </div>
@@ -125,12 +125,6 @@ const RoomSection = () => {
         ))}
       </div>
        <div className="mt-6 flex justify-center">
-          <a
-            href="/rooms" 
-            className="bg-red-800  text-white px-6 py-3 rounded-lg shadow-md hover:bg-red-900 transition-all duration-300 ease-in-out"
-          >
-            Explore Our Rooms
-          </a>
         </div>
     </section>
   );

@@ -63,13 +63,13 @@ const BookYourVilla = () => {
           <div className="flex flex-wrap gap-4" role="group" aria-label="Booking actions">
             <a
               href="/book"
-              className="bg-[#159bc2] text-white px-8 py-3 rounded-full text-md font-bold uppercase shadow hover:bg-[#127b97] transition duration-300"
+              className="bg-[#159bc2] text-white px-8 py-3 rounded-full text-sm font-bold uppercase shadow hover:bg-[#127b97] transition  duration-300"
             >
               Book a Villa
             </a>
             <a
               href="/book"
-              className="border border-[#159bc2] text-[#159bc2] px-8 py-3 rounded-full text-md font-bold uppercase hover:bg-[#159bc210] transition duration-300"
+              className="border border-[#159bc2] text-[#159bc2] px-8 py-3 rounded-full text-sm font-bold uppercase hover:bg-[#159bc210] transition duration-300"
             >
               Contact Us
             </a>

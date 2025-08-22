@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import {
   Wifi,
   Car,
@@ -47,14 +46,13 @@ const amenities = [
 ];
 
 export default function RoomDetails() {
-  const navigate = useNavigate();
   const [idx, setIdx] = useState(0);
 
   const prev = () => setIdx((p) => (p - 1 + superDeluxeImages.length) % superDeluxeImages.length);
   const next = () => setIdx((p) => (p + 1) % superDeluxeImages.length);
   const goTo = (i) => setIdx(i);
 
-  const handleSubmit = () => navigate("/book");
+  
 
   return (
     <div className="container mx-auto max-w-6xl py-10 px-2">
@@ -129,12 +127,13 @@ export default function RoomDetails() {
 
             {/* CTA */}
             <div className="mt-8">
-              <button
-                onClick={handleSubmit}
-                className="w-full sm:w-auto px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300"
-              >
-                Send Enquire
-              </button>
+           <a
+  href="/book"  // Replace with your target URL or route
+  className="w-full sm:w-auto px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300"
+>
+  Send Enquire
+</a>
+
             </div>
           </div>
 

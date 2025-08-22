@@ -58,7 +58,7 @@ export default function Footer() {
           <h3 className="text-lg font-semibold text-gray-800 mb-4">Follow Us</h3>
           <div className="flex space-x-4">
             <a
-              href="https://www.instagram.com/castlevillas" // ← update to your real handle
+              href="https://www.instagram.com/castle_villa_manali/" // ← update to your real handle
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
@@ -67,7 +67,7 @@ export default function Footer() {
               <FaInstagram size={24} />
             </a>
             <a
-              href="https://www.facebook.com/castlevillas" // ← update to your real page
+              href="https://www.facebook.com/profile.php?id=61579653992456" // ← update to your real page
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
@@ -76,16 +76,7 @@ export default function Footer() {
               <FaFacebook size={24} />
             </a>
             <a
-              href="https://twitter.com/castlevillas" // ← update to your real handle
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Twitter (X)"
-              className="text-black hover:text-black"
-            >
-              <BsTwitterX size={24} />
-            </a>
-            <a
-              href="https://www.youtube.com/@castlevillas" // ← update to your real channel
+              href="https://www.youtube.com/@TheCastleVilla-l6j" 
               target="_blank"
               rel="noopener noreferrer"
               aria-label="YouTube"
